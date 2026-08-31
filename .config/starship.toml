@@ -1,0 +1,36 @@
+# Explicitly format the prompt line with a static Arch icon
+format = """
+[ ](bold blue)$directory$git_branch$git_status$fill$time
+$character"""
+
+# Disable the generic OS module entirely to prevent symbol glitches
+[os]
+disabled = true
+
+[character]
+success_symbol = "[❯](bold green) "
+error_symbol = "[❯](bold red) "
+
+[directory]
+style = "bold cyan"
+format = "[$path]($style) "
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = " "
+style = "bold green"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "bold green"
+format = "[$all_status$ahead_behind]($style) "
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+time_format = "%r"
+style = "bold cyan"
+format = "[$time]($style)"

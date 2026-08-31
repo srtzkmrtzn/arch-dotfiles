@@ -1,0 +1,5 @@
+PROMPT='%F{green}%n%f@%m %F{blue}%1~%f %# '
+export EDITOR="nvim"
+export VISUAL="nvim"
+eval "$(starship init zsh)"
+

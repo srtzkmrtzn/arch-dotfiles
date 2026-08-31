@@ -1,0 +1,49 @@
+{
+  "custom/system-text": {
+    "exec": "~/.config/waybar/demeter-cyan/scripts/system-text.sh",
+    "interval": 1,
+    "return-type": "json",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "○",
+      "empty": "○",
+      "persistent": "○",
+      "visible": "●",
+      "active": "●",
+      "special": "◎"
+    },
+    "all-outputs": false,
+    "persistent-workspaces": {
+      "eDP-1": [1, 2, 3, 4, 5,],
+      "HDMI-A-1": [6, 7, 8, 9, 10]
+    },
+    "show-special": false,
+    "sort-by": "number",
+    "disable-scroll": true
+  },
+
+  "custom/nowplaying": {
+    "exec": "~/.config/waybar/demeter-cyan/scripts/spotify-nowplaying.sh",
+    "exec-if": "playerctl -p spotify status >/dev/null 2>&1",
+    "interval": 2
+  },
+
+  "hyprland/window": {
+    "format": "  {}",
+    "max-length": 45,
+    "separate-outputs": true,
+    "rewrite": {
+      ".*mis@scerpnext.*": "scerp ssh",
+
+      "(.*) - Mozilla Firefox": "Firefox",
+      "(.*) - Chromium": "Chromium",
+      "(.*) - Visual Studio Code": "VS Code",
+
+      "(.*)": "$1"
+    }
+  }
+}
