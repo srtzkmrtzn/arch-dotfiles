@@ -1,15 +1,24 @@
-# caches / state
-**/.cache/
-**/cache/
-**/*.log
-**/*.db
-**/state/
-**/sessions/
-**/session/
-**/tmp/
+# Ignore everything by default
+*
 
-# secrets / env
-**/.env
-**/*secret*
-**/*token*
-**/*key*
+# But do not ignore directories themselves (so git can look inside them)
+!*/
+
+# Explicitly allow your main config folders
+!.config/
+!.config/i3/
+!.config/i3/config
+!.config/alacritty/
+!.config/alacritty/alacritty.toml
+!.config/nvim/
+
+# Explicitly allow your shell configurations
+!.bashrc
+!.zshrc
+!.xprofile
+!.Xresources
+
+# Explicitly block known system junk inside allowed folders
+**/.cache/
+**/*.log
+**/node_modules/
