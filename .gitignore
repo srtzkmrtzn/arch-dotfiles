@@ -1,24 +1,24 @@
 # Ignore everything by default
 *
 
-# But do not ignore directories themselves (so git can look inside them)
+# Allow Git to look inside folders
 !*/
 
-# Explicitly allow your main config folders
-!.config/
-!.config/i3/
-!.config/i3/config
+# Explicitly allow Hyprland and core Wayland tools
+!.config/hypr/
+!.config/waybar/
+!.config/rofi/
+!.config/wofi/
+!.config/dunst/
+!.config/mako/
+!.config/kitty/
 !.config/alacritty/
-!.config/alacritty/alacritty.toml
-!.config/nvim/
 
-# Explicitly allow your shell configurations
+# Shell and Environment setups
 !.bashrc
 !.zshrc
-!.xprofile
-!.Xresources
+!.config/environment.d/
 
-# Explicitly block known system junk inside allowed folders
+# Block known session runtime artifacts from bleeding in
+**/hyprland.log
 **/.cache/
-**/*.log
-**/node_modules/
