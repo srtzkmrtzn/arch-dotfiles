@@ -57,7 +57,7 @@
   // Memory / CPU / Temp
   "memory": {
     "format": " {: >3}%",
-    "on-click": "system-monitor"
+    "on-click": "btop"
   },
   "cpu": {
     "format": "󰘚 {usage: >3}%",

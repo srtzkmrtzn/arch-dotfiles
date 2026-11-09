@@ -32,8 +32,6 @@ configuration {
     selected-bg: #1a1b26;
 
     /* GLOBAL RESET */
-    background-color: transparent;
-    text-color: @fg;
     font: "Figtree 13";
     margin: 0;
     padding: 0;
@@ -74,7 +72,7 @@ inputbar {
 }
 
 entry {
-    placeholder: "Search Apps...";
+    placeholder: "Search Application...";
     placeholder-color: #565f89;
     text-color: @fg;
 }

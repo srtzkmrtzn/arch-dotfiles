@@ -49,3 +49,4 @@ fi
 # Looks like: 󰁿 67% ━━━━━━━───
 TEXT="$ICON ${CAP}% $BAR"
 echo "{\"text\":\"$TEXT\",\"tooltip\":\"Battery: ${CAP}% (${STATUS})\",\"class\":\"$CLASS\"}"
+font="JetBrainsMono Nerd Font"
